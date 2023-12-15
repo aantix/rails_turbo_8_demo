@@ -10,10 +10,10 @@
 
 user = User.create(name: 'Jim Jones', email: 'jim.jones1@gmail.com')
 
-blog1 = Blog.create(name: 'Blog #1', user: user)
-post1 = Post.create(title: 'Post #1', description: 'My post description', blog: blog1)
-post2 = Post.create(title: 'Post #2', description: 'My post description', blog: blog1)
+blog1 = Blog.create(name: 'Dinner and a Movie', user: user)
+post1 = Post.create(title: 'Titanic', description: 'A Love Story', blog: blog1)
+post2 = Post.create(title: 'Airplane! The Movie', description: 'The Greatest Comedy Ever', blog: blog1)
 
-blog2 = Blog.create(name: 'Blog #2', user: user)
-post3 = Post.create(title: 'Post #3', description: 'My post description', blog: blog2)
-post4 = Post.create(title: 'Post #4', description: 'My post description', blog: blog2)
+blog2 = Blog.create(name: 'Nacho Typical Blog', user: user)
+post3 = Post.create(title: 'Best Stadium Nachos.', description: 'Best MLB Stadium Nachos', blog: blog2)
+post4 = Post.create(title: 'Best local nachos', description: 'Best nachos in Lincoln, NE', blog: blog2)

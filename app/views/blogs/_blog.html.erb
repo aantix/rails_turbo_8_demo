@@ -4,10 +4,12 @@
   </p>
 
 
-  <p>
-    Post count:
-    <%= blog.posts.count %>
-  </p>
+  Posts (<%= blog.posts.count %>):
+  <% blog.posts.each do |post| %>
+  <ul>
+    <li><%= render post, blog: blog %>
+  </ul>
+  <% end %>
 
   <p>
     <%= link_to "New post for #{blog.name}", new_blog_post_path(blog) %>
