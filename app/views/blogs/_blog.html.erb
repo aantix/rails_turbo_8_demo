@@ -1,0 +1,18 @@
+<div id="<%= dom_id blog %>">
+  <p>
+    Edit: <%= link_to blog.name, edit_blog_path(blog) %>
+  </p>
+
+
+  <p>
+    Post count:
+    <%= blog.posts.count %>
+  </p>
+
+  <p>
+    <%= link_to "New post for #{blog.name}", new_blog_post_path(blog) %>
+  </p>
+
+  <hr/>
+
+</div>

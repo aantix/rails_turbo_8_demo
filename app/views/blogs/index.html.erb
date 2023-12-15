@@ -1,0 +1,19 @@
+<%= turbo_stream_from @user %>
+
+<p style="color: green"><%= notice %></p>
+
+<h1>
+  Blogs for <%= @user.name %> - Updated: <%= Time.current.to_s %>
+</h1>
+
+
+<%= link_to "(+) New blog", new_blog_path %>
+
+<hr/>
+
+<div id="blogs">
+  <% @user.blogs.each do |blog| %>
+    <%= render blog %>
+  <% end %>
+</div>
+
