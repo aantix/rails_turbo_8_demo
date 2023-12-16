@@ -1,24 +1,10 @@
-# README
+# Rails Turbo 8 Demo App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Inspired by this fly.io article: https://fly.io/ruby-dispatch/turbo-8-in-8-minutes/
 
-Things you may want to cover:
+```
+rails db:reset
+rails s
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Visit http://localhost:3000/
