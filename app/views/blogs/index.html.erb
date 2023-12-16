@@ -2,17 +2,17 @@
 
 <p style="color: green"><%= notice %></p>
 
-<div class="text-right muted">
-  Updated: <%= Time.current.to_s %>
-</div>  
 
-<h2>
-  <div class="inline-block">
+<div class="header">
+  <h2 class="inline title">
     Blogs for <%= @user.name %> (<%= @user.blogs.count %>)
-  </div>
-</h2>
+  </h2>
+  <div class="inline timestamp muted">
+    Updated: <%= Time.current.to_s %>
+  </div>  
+</div>
 
-<div class="text-right">
+<div class="">
   <%= link_to "➕ New blog", new_blog_path%>
 </div>
 

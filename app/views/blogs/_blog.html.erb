@@ -1,18 +1,19 @@
 <div id="<%= dom_id blog %>">
-  <h3>
-    <%= link_to "#{blog.name} (#{blog.posts.count} posts)", edit_blog_path(blog) %>
-  </h3>
+  <div class="header">
+    <h3 class="inline title">
+      <%= link_to "#{blog.name} (#{blog.posts.count} posts)", edit_blog_path(blog) %>
+    </h3>
 
+    <div class="inline add-post">
+      <%= link_to "➕ Add Post", new_blog_post_path(blog) %>
+    </div>
+  </div>
 
   <% blog.posts.each do |post| %>
-  <ul>
-    <li><%= render post, blog: blog %>
-  </ul>
+    <ul>
+      <li><%= render post, blog: blog %>
+    </ul>
   <% end %>
-
-  <div class="text-right">
-    <%= link_to "➕ Add Post for #{blog.name}", new_blog_post_path(blog) %>
-  </div>
 
   <hr/>
 

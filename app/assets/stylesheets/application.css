@@ -35,3 +35,16 @@ a {
 .inline-block {
     display: inline-block;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title, .timestamp, .add-post {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
