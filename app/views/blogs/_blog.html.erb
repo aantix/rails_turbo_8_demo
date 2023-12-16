@@ -1,19 +1,18 @@
 <div id="<%= dom_id blog %>">
-  <p>
-    Edit: <%= link_to blog.name, edit_blog_path(blog) %>
-  </p>
+  <h3>
+    <%= link_to "#{blog.name} (#{blog.posts.count} posts)", edit_blog_path(blog) %>
+  </h3>
 
 
-  Posts (<%= blog.posts.count %>):
   <% blog.posts.each do |post| %>
   <ul>
     <li><%= render post, blog: blog %>
   </ul>
   <% end %>
 
-  <p>
-    <%= link_to "New post for #{blog.name}", new_blog_post_path(blog) %>
-  </p>
+  <div class="text-right">
+    <%= link_to "➕ Add Post for #{blog.name}", new_blog_post_path(blog) %>
+  </div>
 
   <hr/>
 

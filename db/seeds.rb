@@ -17,3 +17,4 @@ post2 = Post.create(title: 'Airplane! The Movie', description: 'The Greatest Com
 blog2 = Blog.create(name: 'Nacho Typical Blog', user: user)
 post3 = Post.create(title: 'Best Stadium Nachos.', description: 'Best MLB Stadium Nachos', blog: blog2)
 post4 = Post.create(title: 'Best local nachos', description: 'Best nachos in Lincoln, NE', blog: blog2)
+post5 = Post.create(title: 'Best local SF nachos', description: 'Best nachos in San Francisco, CA', blog: blog2)

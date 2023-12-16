@@ -1,3 +1,10 @@
 <div id="<%= dom_id post %>">
-  <%= link_to post.title, edit_blog_post_path(blog, post) %>
+  <div>
+    <%= link_to post.title, edit_blog_post_path(blog, post) %>
+  </div>  
+
+  <div class="muted">
+    <%= post.description %>
+  </div>
+
 </div>
