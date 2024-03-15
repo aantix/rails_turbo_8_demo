@@ -5,7 +5,11 @@
     </h3>
 
     <div class="inline add-post">
-      <%= link_to "➕ Add Post", new_blog_post_path(blog) %>
+      <%= link_to "Add Post", new_blog_post_path(blog) %>
+
+      <% if admin? %>
+        | <%= link_to("Admin: Delete blog", blog_path(blog), action: :delete) %>
+      <% end %>
     </div>
   </div>
 

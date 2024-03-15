@@ -1,10 +1,16 @@
 class BlogsController < ApplicationController
+  cattr_accessor :request_count
+  @@request_count = 0
+
   before_action :set_user
+  before_action :set_admin
   before_action :set_blog, only: %i[ show edit update destroy ]
 
   # GET /blogs or /blogs.json
   def index
-    @blogs = Blog.all
+    logger.info("***** Request ##{@@request_count+=1}: #{request.request_id}".red)
+
+    @blogs = Blog.order('created_at desc')
   end
 
   # GET /blogs/1 or /blogs/1.json
@@ -49,6 +55,10 @@ class BlogsController < ApplicationController
   end
 
   private
+    def set_admin
+      cookies[:admin] = true if params[:admin] == '1'
+      cookies.delete(:admin) if params[:admin] == '0'
+    end
     def set_user
       @user = User.first 
     end

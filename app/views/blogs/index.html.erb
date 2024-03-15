@@ -5,7 +5,11 @@
 
 <div class="header">
   <h2 class="inline title">
-    Blogs for <%= @user.name %> (<%= @user.blogs.count %>)
+    <% if admin? %>
+      Admin: Blogs for <%= @user.name %> (<%= @user.blogs.count %>)
+    <% else %>
+      Blogs for <%= @user.name %> (<%= @user.blogs.count %>)
+    <% end %>
   </h2>
   <div class="inline timestamp muted">
     Updated: <%= Time.current.to_s %>
